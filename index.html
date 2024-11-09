@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Party</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- #burger.burger>span*3 -->
+    <div id="burger" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <header id="wedding_top">
+        <div class="logo">
+            <h1><span>Welcome to </span>Our Wedding Party</h1>
+        </div>
+    </header>
+    <!-- header -->
+
+    <nav id="g_nav">
+        <div class="nav_inner  container">
+            <ul>
+                <li><a href="#msgSec">Message</a></li>
+                <li><a href="#dateSec">Date</a></li>
+                <li><a href="#acsSec">Access</a></li>
+                <li><a href="#qaSec">QaA</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav  -->
+    <main class="main container">
+        <section id="msgSec" class="message">
+            <h2>Message</h2>
+            <p>この度、私たちは長い付き合いを経て、はれて結婚式を挙げることになりました。<br class="pc">
+                つきましては、日頃お世話になっている皆様方にお集まりいただき、<br class="pc">ささやかではありますがウエディングパーティーを催したいと思います。</p>
+            <p>お忙しいとは思いますが、是非ともご参加いただきたいと思い、<br class="pc">ご案内させていただきます。</p>
+
+            <ul>
+                <li><img src="img/party2.jpg" alt="party_photo"></li>
+                <li><img src="img/party1.jpg" alt="party_photo"></li>
+                <li><img src="img/party3.jpg" alt="party_photo"></li>
+            </ul>
+        </section>
+        <!-- section msgSec -->
+
+        <section id="dateSec" class="date">
+            <h2>Save the Date</h2>
+            <div class="date_item">
+                <p class="photo"><img src="img/party4.jpg" alt="party_photo"></p>
+                <div class="text">
+                    <p>2023.7.28 <span>( fri )</span><br>
+                    <span>start</span>15:00 - </p>
+                    
+                </div>
+            </div>
+            
+        </section>
+        <!-- section dateSec -->
+
+        <section id="acsSec" class="access">
+            <h2>Access</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3238.9409446677796!2d139.71232161526004!3d35.727670880183496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5Y2X5rGg6KKLIOWFrOWckiDjgqvjg5Xjgqc!5e0!3m2!1sja!2sjp!4v1668947792336!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>東京都豊島区南池袋 000-0000 <br> 03-××××-××××</p>
+
+        </section>
+        <!-- section acseSec -->
+        <section id="qaSec" class="qaa">
+            <h2>Q and A</h2>
+            <dl id="dl">
+                <dt>Q and A 1</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente facere dolores magni, eius voluptate maiores est consectetur eaque unde similique et minus commodi iste magnam, sit nesciunt iusto natus.</dd>
+                <dt>Q and A 2</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quaerat facilis perferendis ex non distinctio commodi hic a nesciunt aut? Laborum repudiandae consequatur earum id sapiente dolor facilis quo magni.</dd>
+                <dt>Q and A 3</dt>
+                <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa a nam fuga neque voluptates itaque quis quasi, eligendi consequatur. Itaque consequuntur odio quis labore obcaecati, illo vel sunt aperiam velit.</dd>
+                <dt>Q and A 4</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam placeat nobis eaque enim doloribus harum officia exercitationem, quisquam odio amet officiis repellendus itaque maxime dolorem labore voluptatem cupiditate illo aliquid.</dd>
+                <dt>Q and A 5</dt>
+                <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet corporis obcaecati porro culpa quo totam nesciunt ducimus odit? Neque officia eaque suscipit eos quis, consequatur temporibus delectus. Magnam, magni veritatis.</dd>
+            </dl>
+
+        </section>
+        <!-- section qaSec -->
+
+    </main>
+    <!-- main -->
+    <footer>
+        <p>○○○○ copy right</p>
+    </footer>
+    <!-- footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#burger').on('click',function(){
+                $('#burger').toggleClass('active');
+                // #burgerをクリックしたら、#burgerのclass
+                // activeが追加された挙動が生じる
+                $('#g_nav').toggleClass('drawer');
+                // #burgerをクリックしたら、#g_navのクラス
+                // drawerが追加された挙動が生じる
+            });
+
+            // #g_nav aのクリックはページ内リンク
+            // 追加機能としてjQueryで以下の内容を追加
+            $('#g_nav a').on('click',function(){
+                $('#burger').toggleClass('active');
+                // #burgerに追加されたactiveを削除し
+                // #bergerの最初の状態に戻す
+                $('#g_nav').toggleClass('drawer');
+                // #g_navに追加されたdrawerを削除し
+                // #g_vavの最初の状態に戻す
+            });
+
+            $('#dl dt').on('click',function(){
+		        $(this).next().slideToggle();
+                // 複数のdtの単一選択$(this)、かつ
+                // その隣のnext()、つまりddを選択、slideToggle()
+	        });
+
+        });
+    </script>
+</body>
+</html>
